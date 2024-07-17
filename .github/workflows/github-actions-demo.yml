@@ -28,11 +28,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      
-      - name: Print out trigger name
-        run: echo trigger name 
-      - name: Print out branch name
-        run: echo branch name 
+      - run: echo "event name is:" ${{ github.event_name }} 
+      - run: echo "event type is:" ${{ github.event.action }}
   
 
 
